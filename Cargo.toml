@@ -48,7 +48,7 @@ optional = true
 [dependencies.rust-gmp]
 version = "0.5.0"
 features = ["serde_support"]
-git = "https://github.com/KZen-networks/rust-gmp"
+git = "https://github.com/ansonhwa/anson-rust-gmp"
 optional = true
 
 [dependencies.secp256k1]
