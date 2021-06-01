@@ -31,30 +31,30 @@ pub struct EcKeyPair {
     secret_share: FE,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct CommWitness {
     pub pk_commitment_blind_factor: BigInt,
     pub zk_pok_blind_factor: BigInt,
     pub public_share: GE,
     pub d_log_proof: DLogProof,
 }
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party1FirstMessage {
     pub pk_commitment: BigInt,
     pub zk_pok_commitment: BigInt,
 }
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party2FirstMessage {
     pub d_log_proof: DLogProof,
     pub public_share: GE,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party1SecondMessage {
     pub comm_witness: CommWitness,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party2SecondMessage {}
 
 impl Party1FirstMessage {
