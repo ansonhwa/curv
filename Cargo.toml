@@ -36,13 +36,13 @@ version = "^0.1"
 optional = true
 
 [dependencies.sapling-crypto]
-git = "https://github.com/omershlo/librustzcash.git"
-rev = "3e667406323430813f6dbae2a60b5a83046fa20a"
+git = "https://github.com/ansonhwa/anson-librustzcash.git"
+rev = "4868e36b1076427e018c54b5ff709e9082f608f2"
 optional = true
 
 [dependencies.pairing]
-git = "https://github.com/omershlo/librustzcash.git"
-rev = "3e667406323430813f6dbae2a60b5a83046fa20a"
+git = "https://github.com/ansonhwa/anson-librustzcash.git"
+rev = "4868e36b1076427e018c54b5ff709e9082f608f2"
 optional = true
 
 [dependencies.rust-gmp]
