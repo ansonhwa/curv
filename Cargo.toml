@@ -17,7 +17,7 @@ merkle = ["rust-crypto", "merkle-sha3"]
 
 [dependencies]
 rand = "0.6"
-serde = "1.0"
+serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0"
 zeroize = "1"
 sha3 = "0.8.2"
