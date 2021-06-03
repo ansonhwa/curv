@@ -19,7 +19,7 @@ merkle = ["rust-crypto", "merkle-sha3"]
 rand = "0.6"
 serde = "1.0"
 serde_derive = "1.0"
-zeroize = "1.3.0"
+zeroize = "1"
 sha3 = "0.8.2"
 sha2 = "0.8.0"
 hmac = "0.7.1"
@@ -47,13 +47,11 @@ optional = true
 
 [dependencies.rust-gmp]
 version = "0.5.0"
-features = ["serde_support"]
 git = "https://github.com/ansonhwa/anson-rust-gmp"
 optional = true
 
 [dependencies.secp256k1]
 version = "0.15.3"
-features = ["serde"]
 optional = true
 
 [dependencies.curve25519-dalek]
