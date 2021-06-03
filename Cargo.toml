@@ -47,11 +47,13 @@ optional = true
 
 [dependencies.rust-gmp]
 version = "0.5.0"
+features = ["serde"]
 git = "https://github.com/ansonhwa/anson-rust-gmp"
 optional = true
 
 [dependencies.secp256k1]
 version = "0.15.3"
+features = ["serde"]
 optional = true
 
 [dependencies.curve25519-dalek]
