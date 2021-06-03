@@ -14,6 +14,11 @@ use crate::FE;
 use crate::GE;
 use zeroize::Zeroize;
 
+#[cfg(feature="serde")]
+use serde::ser::{Serialize, Serializer};
+#[cfg(feature="serde")]
+use serde::{Deserialize, Deserializer};
+
 /// This is a proof of knowledge that a pair of group elements {D, E}
 /// form a valid homomorphic ElGamal encryption (”in the exponent”) using public key Y .
 /// (HEG is defined in B. Schoenmakers and P. Tuyls. Practical Two-Party Computation Based on the Conditional Gate)

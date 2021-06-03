@@ -25,36 +25,36 @@ use crate::GE;
 
 const SECURITY_BITS: usize = 256;
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[cfg(feature="serde"), derive(Clone, Debug, Serialize, Deserialize)]
 pub struct EcKeyPair {
     pub public_share: GE,
     secret_share: FE,
 }
 
-#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct CommWitness {
     pub pk_commitment_blind_factor: BigInt,
     pub zk_pok_blind_factor: BigInt,
     pub public_share: GE,
     pub d_log_proof: DLogProof,
 }
-#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party1FirstMessage {
     pub pk_commitment: BigInt,
     pub zk_pok_commitment: BigInt,
 }
-#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party2FirstMessage {
     pub d_log_proof: DLogProof,
     pub public_share: GE,
 }
 
-#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party1SecondMessage {
     pub comm_witness: CommWitness,
 }
 
-#[cfg_attr(feature = "std", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", derive(Clone, Debug, serde::Serialize, serde::Deserialize))]
 pub struct Party2SecondMessage {}
 
 impl Party1FirstMessage {
